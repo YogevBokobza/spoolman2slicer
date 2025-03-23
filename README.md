@@ -67,7 +67,7 @@ options:
   -h, --help            show this help message and exit
   --version             show program\'s version number and exit
   -d DIR, --dir DIR     the filament config dir
-  -s {orcaslicer,prusaslicer,slic3r,superslicer}, --slicer {orcaslicer,prusaslicer,slic3r,superslicer}
+  -s {orcaslicer,crealityprint,prusaslicer,slic3r,superslicer}, --slicer {orcaslicer,crealityprint,prusaslicer,slic3r,superslicer}
                         the slicer
   -u URL, --url URL     URL for the Spoolman installation
   -U, --updates         keep running and update filament configs if they\'re

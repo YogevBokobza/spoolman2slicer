@@ -24,6 +24,7 @@ DEFAULT_TEMPLATE_SUFFIX = ".template"
 FILENAME_TEMPLATE = "filename.template"
 
 ORCASLICER = "orcaslicer"
+CREALITYPRINT = "crealityprint"
 PRUSASLICER = "prusaslicer"
 SLICER = "slic3r"
 SUPERSLICER = "superslicer"
@@ -46,7 +47,7 @@ parser.add_argument(
     "-s",
     "--slicer",
     default=SUPERSLICER,
-    choices=[ORCASLICER, PRUSASLICER, SLICER, SUPERSLICER],
+    choices=[ORCASLICER, CREALITYPRINT, PRUSASLICER, SLICER, SUPERSLICER],
     help="the slicer",
 )
 
@@ -131,7 +132,7 @@ def get_config_suffix():
     """Returns the slicer's config file prefix"""
     if args.slicer == SUPERSLICER:
         return ["ini"]
-    if args.slicer == ORCASLICER:
+    if args.slicer == ORCASLICER or args.slicer == CREALITYPRINT:
         return ["json", "info"]
 
     raise ValueError("That slicer is not yet supported")
@@ -264,6 +265,7 @@ def load_and_update_all_filaments(url: str):
 
     for spool in spools:
         filament = spool["filament"]
+        filament["spool_id"] = spool["id"]
         for suffix in get_config_suffix():
             add_sm2s_to_filament(filament, suffix)
             write_filament(filament)
