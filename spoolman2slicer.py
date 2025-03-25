@@ -14,6 +14,8 @@ import json
 import os
 import time
 import sys
+import shutil
+import glob
 
 from jinja2 import Environment, FileSystemLoader, TemplateNotFound
 import requests
@@ -83,6 +85,17 @@ parser.add_argument(
 args = parser.parse_args()
 
 template_path = os.path.expanduser("~/.config/spoolman2slicer/templates-" + args.slicer)
+script_dir = os.path.dirname(__file__)
+destination_path = os.path.expanduser('~/.config/spoolman2slicer/')
+
+# Find all matching directories or files using glob
+templates = glob.glob(os.path.join(script_dir, 'templates-*'))
+
+# Copy each matching directory to the destination
+for template in templates:
+    dest = os.path.join(destination_path, os.path.basename(template))
+    shutil.copytree(template, dest, dirs_exist_ok=True)
+    print(f"Copied {template} to {dest}")
 
 if not os.path.exists(template_path):
     script_dir = os.path.dirname(__file__)
