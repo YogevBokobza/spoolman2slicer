@@ -14,7 +14,6 @@
                 "-d", "C:\\Users\\Yogev Bokobza\\AppData\\Roaming\\Creality\\Creality Print\\6.0\\user\\default\\filament",
                 "-s", "crealityprint",
                 "-u", "http://192.168.1.175:7912",
-                "--delete-all",
                 "-v"
             ]
         },
@@ -28,7 +27,6 @@
                 "-d", "C:\\Users\\Yogev Bokobza\\AppData\\Roaming\\Creality\\Creality Print\\6.0\\user\\default\\filament",
                 "-s", "crealityprint",
                 "-u", "http://192.168.1.175:7912",
-                "--delete-all",
                 "-v"
             ]
         }
