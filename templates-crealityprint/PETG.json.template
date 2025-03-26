@@ -44,8 +44,14 @@
         "{{vendor.name}}"
     ],
     "from": "User",
-    "inherits": "Hyper PETG @Creality K2 Plus 0.4 nozzle",
+    "inherits": "Generic PETG @Creality K2 Plus 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "{{name}}",
+    "nozzle_temperature": [
+        "{{settings_extruder_temp|int}}"
+    ],
+    "textured_plate_temp": [
+        "{{settings_bed_temp|int}}"
+    ],
     "version": "2.1.1.0"
 }
