@@ -32,6 +32,9 @@
     "filament_end_gcode": [
         "; filament end gcode \n;CLEAR_ACTIVE_SPOOL"
     ],
+    "filament_max_volumetric_speed": [
+        "23"
+    ],
 {% if extra.enable_pressure_advance %}
     "enable_pressure_advance": [
 	"1"
