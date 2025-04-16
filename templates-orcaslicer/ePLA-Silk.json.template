@@ -47,7 +47,7 @@
         "{{vendor.name}}"
     ],
     "from": "User",
-    "inherits": "Creality PLA Generic PLA @Creality K2 Plus 0.4 nozzle",
+    "inherits": "Creality PLA Generic PLA-Silk @Creality K2 Plus 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "{{name}}",
     "nozzle_temperature": [

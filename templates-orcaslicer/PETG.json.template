@@ -21,6 +21,15 @@
     "filament_density": [
         "{{density}}"
     ],
+    "filament_max_volumetric_speed": [
+        "18"
+    ],
+    "filament_retract_before_wipe": [
+        "nil"
+    ],
+    "filament_retraction_length": [
+        "nil"
+    ],
 {% if extra.enable_flow_ratio %}
     "filament_flow_ratio": [
         "{{extra.flow_ratio|default(1)|float}}"
@@ -47,7 +56,7 @@
         "{{vendor.name}}"
     ],
     "from": "User",
-    "inherits": "Creality PLA Generic PLA @Creality K2 Plus 0.4 nozzle",
+    "inherits": "Creality PETG Generic PETG @Creality K2 Plus 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "{{name}}",
     "nozzle_temperature": [
