@@ -21,7 +21,7 @@
     "filament_density": [
         "{{density}}"
     ],
-{% if extra.enable_flow_ratio %}
+{% if extra.enable_flow_ratio == 'true' %}
     "filament_flow_ratio": [
         "{{extra.flow_ratio|default(1)|float}}"
     ],
@@ -35,7 +35,7 @@
     "filament_end_gcode": [
         "; filament end gcode \n;CLEAR_ACTIVE_SPOOL"
     ],
-{% if extra.enable_pressure_advance %}
+{% if extra.enable_pressure_advance == 'true' %}
     "enable_pressure_advance": [
 	"1"
     ],

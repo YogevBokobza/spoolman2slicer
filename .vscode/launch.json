@@ -11,7 +11,21 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "args": [
-                "-d", "C:\\Users\\Yogev Bokobza\\AppData\\Roaming\\Creality\\Creality Print\\6.0\\user\\default\\filament",
+                "-d", "C:\\Users\\Yogev Bokobza\\AppData\\Roaming\\Creality\\Creality Print\\6.0\\user\\3707869465\\filament",
+                "-s", "crealityprint",
+                "-u", "http://192.168.1.175:7912",
+                "--delete-all",
+                "-v"
+            ]
+        },
+        {
+            "name": "Creality Print 7.0: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "-d", "C:\\Users\\Yogev Bokobza\\AppData\\Roaming\\Creality\\Creality Print\\7.0\\user\\default\\filament",
                 "-s", "crealityprint",
                 "-u", "http://192.168.1.175:7912",
                 "--delete-all",

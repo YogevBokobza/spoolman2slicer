@@ -279,6 +279,8 @@ def load_and_update_all_filaments(url: str):
     for spool in spools:
         filament = spool["filament"]
         filament["spool_id"] = spool["id"]
+        year = int(str(time.strftime("%Y"))[-2:])
+        filament["spool_id_extended"]  = str(year) + str(spool["id"]).rjust(3, "0")
         for suffix in get_config_suffix():
             add_sm2s_to_filament(filament, suffix)
             write_filament(filament)
