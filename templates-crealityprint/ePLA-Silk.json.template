@@ -3,7 +3,7 @@
         "0"
     ],
     "activate_chamber_temp_control": [
-        "0"
+        "1"
     ],
     "additional_cooling_fan_speed": [
         "80"
@@ -12,7 +12,7 @@
         "35"
     ],
     "close_fan_the_first_x_layers": [
-        "3"
+        "1"
     ],
     "compatible_printers": [
         "Creality K2 Plus 0.4 nozzle"
@@ -102,12 +102,12 @@
         "{{diameter}}"
     ],
     "filament_end_gcode": [
-        ""
+        ";filament end gcode \n"
     ],
     "filament_flow_ratio": [
         "{{extra.flow_ratio|default(0.95)|float}}"
     ],
-    "filament_id": "Pcdf9b03",
+    "filament_id": "Pcdf9c93",
     "filament_is_support": [
         "0"
     ],
@@ -124,7 +124,7 @@
         "nil"
     ],
     "filament_max_volumetric_speed": [
-        "{{extra.max_volumetric_speed|default(6)|float}}"
+        "{{extra.max_volumetric_speed|default(10)|float}}"
     ],
     "filament_minimal_purge_on_wipe_tower": [
         "15"
@@ -242,7 +242,6 @@
         "0"
     ],
     "inherits": "",
-    "is_custom_defined": "0",
     "material_flow_dependent_temperature": [
         "0"
     ],
@@ -282,7 +281,7 @@
         "1"
     ],
     "slow_down_layer_time": [
-        "6"
+        "8"
     ],
     "slow_down_min_speed": [
         "20"
